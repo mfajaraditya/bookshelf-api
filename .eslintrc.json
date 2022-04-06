@@ -11,5 +11,10 @@
         "ecmaVersion": "latest"
     },
     "rules": {
+        "linebreak-style":0,
+        "max-line-length": [
+            true,
+            140
+        ]
     }
 }
