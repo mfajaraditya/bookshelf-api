@@ -143,7 +143,7 @@ const editBooksByIdHandler = (request, h) => {
   const updatedAt = new Date().toISOString();
   const index = books.findIndex((book) => book.id === bookId);
   if (index !== -1) {
-    if (!name) {
+    if (name === undefined) {
       const response = h.response({
         status: "fail",
         message: "Gagal memperbarui buku. Mohon isi nama buku",
