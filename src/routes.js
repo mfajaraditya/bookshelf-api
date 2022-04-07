@@ -4,37 +4,37 @@ const {
   getBooksByIdHandler,
   editBooksByIdHandler,
   deleteBooksByIdHandler,
-} = require('./handler');
+} = require("./handler");
 
 const routes = [
   {
-    method: 'POST',
-    path: '/books',
+    method: "POST",
+    path: "/books",
     handler: addBooksHandler,
     options: {
       cors: {
-        origin: ['*'],
+        origin: ["*"],
       },
     },
   },
   {
-    method: 'GET',
-    path: '/books',
+    method: "GET",
+    path: "/books",
     handler: getAllBooksHandler,
   },
   {
-    method: 'GET',
-    path: '/books',
+    method: "GET",
+    path: "/books/{bookId}",
     handler: getBooksByIdHandler,
   },
   {
-    method: 'PUT',
-    path: '/books/{id}',
+    method: "PUT",
+    path: "/books/{bookId}",
     handler: editBooksByIdHandler,
   },
   {
-    method: 'DELETE',
-    path: '/books/{id}',
+    method: "DELETE",
+    path: "/books/{bookId}",
     handler: deleteBooksByIdHandler,
   },
 ];
